@@ -1,0 +1,39 @@
+ERROR [shell::run]:82 command failure: ['c:\\jenkins\\workspace\\stx_regression_4x4\\hi\\bin\\test_onnx_runner.exe', 'unet3d_model.onnx'] @[ C:\IPU_workspace\stx_regression_4x4\vaip_regression\3d_unet_onnx_model ]
+16:07:00  Traceback (most recent call last):
+16:07:00    File "c:\jenkins\workspace\stx_regression_4x4\ci\tools\shell.py", line 71, in run
+16:07:00      return subprocess.run(
+16:07:00    File "subprocess.py", line 526, in run
+16:07:00  subprocess.CalledProcessError: Command '['c:\\jenkins\\workspace\\stx_regression_4x4\\hi\\bin\\test_onnx_runner.exe', 'unet3d_model.onnx']' returned non-zero exit status 1.
+16:07:00  
+16:07:00  ERROR [recipe::run]:70 [3d_unet_onnx_model] command failure: ['c:\\jenkins\\workspace\\stx_regression_4x4\\hi\\bin\\test_onnx_runner.exe', 'unet3d_model.onnx']
+16:07:00  INFO [vaip_model_recipe::run_command]:577 failed: Command '['c:\\jenkins\\workspace\\stx_regression_4x4\\hi\\bin\\test_onnx_runner.exe', 'unet3d_model.onnx']' returned non-zero exit status 1., timeout limit is 36000
+16:07:00  INFO [recipe::run]:66 [3d_unet_onnx_model] running@[ C:\IPU_workspace\stx_regression_4x4\vaip_regression\3d_unet_onnx_model ] : echo FAILED@generate_ep_context
+16:07:00  INFO [shell::run]:60 output = C:\IPU_workspace\stx_regression_4x4\vaip_regression\3d_unet_onnx_model\build.log
+16:07:00  rm existed model cache dir: C:\IPU_workspace\stx_regression_4x4\cache\3d_unet_onnx_model
+16:07:00  _step_gen_ep_context elapse: 0.5123658180236816
+16:07:00  _step_compile_onnx elapse: 0.0
+16:07:00  INFO [vaip_model_recipe::dump_inst_data]:1157 failed: [WinError 3] The system cannot find the path specified: 'C:\\IPU_workspace\\stx_regression_4x4\\cache\\3d_unet_onnx_model'
+16:07:00  cache_cleanup step
+16:07:00  self._json["id"] 3d_unet_onnx_model
+16:07:00  ---------------  get snr_hw mean ---------------
+16:07:00  ERROR: get snr mean error: 'NoneType' object has no attribute 'items'
+16:07:00  self._json["id"] 3d_unet_onnx_model
+16:07:00  ---------------  get snr mean ---------------
+16:07:00  ERROR: get snr mean error: 'NoneType' object has no attribute 'items'
+16:07:00  ---------------  get psnr_hw mean ---------------
+16:07:00  ERROR: get psnr mean error: 'NoneType' object has no attribute 'items'
+16:07:00  ---------------  get psnr mean ---------------
+16:07:00  ERROR: get psnr mean error: 'NoneType' object has no attribute 'items'
+16:07:00  ---------------  get l2norm_hw mean ---------------
+16:07:00  ERROR: get l2norm mean error: 'NoneType' object has no attribute 'items'
+16:07:00  ---------------  get l2norm mean ---------------
+16:07:00  INFO [recipe::make_all]:105 === end :) ==== build [3d_unet_onnx_model] 5.41 seconds done.
+16:07:00  	please read C:\IPU_workspace\stx_regression_4x4\vaip_regression\3d_unet_onnx_model\build.log for details
+16:07:00  INFO [recipe::make_all]:109 save elapse time
+16:07:00  ERROR: get l2norm mean error: 'NoneType' object has no attribute 'items'
+16:07:00  Generate: run_onnx_perf.bat success.
+16:07:00  Generate: run_vart_perf.bat success.
+16:07:00  _step_compare_with_ref elapse: 0.0
+16:07:00  c:\jenkins\workspace\stx_regression_4x4
+16:07:00  run result >> ipu_ci.env_STRIX_modelzoo_3154_AMD_AIE2P_4x4_Overlay_CFG0_subgraph_opt65536_3154.json
+16:07:00  INFO [test::main]:113 all test is finished.
